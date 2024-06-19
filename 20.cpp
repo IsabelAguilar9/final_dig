@@ -215,9 +215,9 @@ void Task_rueda(void *parameter);
         while (1)
         {
           display.fillRect(65, 2, 60, 60, SSD1306_BLACK);
-            display.drawBitmap(0, 0, wheelFrames[frame], LOGO_WIDTH, LOGO_HEIGHT/2, SSD1306_WHITE);
+            display.drawBitmap(64, 5, wheelFrames[frame], LOGO_WIDTH , LOGO_HEIGHT , SSD1306_WHITE);
             display.display();
             frame = (frame + 1) % 3;
             vTaskDelay(speedDelay / portTICK_PERIOD_MS);
         }
-    }
+    } 
