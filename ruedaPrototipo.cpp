@@ -108,19 +108,19 @@ void loop()
     switch (rueda)
     {
     case 0:
-        display.drawBitmap((display.width() - LOGO_WIDTH) / 2, (display.height() - LOGO_HEIGHT) / 2, epd_bitmap_wheel1, LOGO_WIDTH, LOGO_HEIGHT, SSD1306_WHITE);
+        display.drawBitmap((display.width() - LOGO_WIDTH) , (display.height() - LOGO_HEIGHT) / 2, epd_bitmap_wheel1, LOGO_WIDTH, LOGO_HEIGHT, SSD1306_WHITE);
         rueda = 1;
         break;
     case 1:
-        display.drawBitmap((display.width() - LOGO_WIDTH) / 2, (display.height() - LOGO_HEIGHT) / 2, epd_bitmap_wheel2, LOGO_WIDTH, LOGO_HEIGHT, SSD1306_WHITE);
+        display.drawBitmap((display.width() - LOGO_WIDTH) , (display.height() - LOGO_HEIGHT) / 2, epd_bitmap_wheel2, LOGO_WIDTH, LOGO_HEIGHT, SSD1306_WHITE);
         rueda = 2;
         break;
     case 2:
-        display.drawBitmap((display.width() - LOGO_WIDTH) / 2, (display.height() - LOGO_HEIGHT) / 2, epd_bitmap_wheel3, LOGO_WIDTH, LOGO_HEIGHT, SSD1306_WHITE);
+        display.drawBitmap((display.width() - LOGO_WIDTH), (display.height() - LOGO_HEIGHT) / 2, epd_bitmap_wheel3, LOGO_WIDTH, LOGO_HEIGHT, SSD1306_WHITE);
         rueda = 0;
         break;
     }
 
     display.display();
-    delay(500); // Pausa de medio segundo entre frames
+    delay(1000); // Pausa de medio segundo entre frames
 }
