@@ -177,17 +177,17 @@ void Task_rueda(void *parameter);
     // Tarea para leer el teclado y enviar las teclas a la cola
     void Task_read_keypad(void *parameter)
     {
-        keyQueue = xQueueCreate(10, sizeof(char));
-
-        while (1)
+        char key;
+        for (;;)
         {
-            char key = teclado.getKey();
-            if (key != NO_KEY)
+            key = teclado.getKey();
+            if(key)
             {
                 xQueueSend(keyQueue, &key, portMAX_DELAY);
             }
-            vTaskDelay(10);
+            vTaskDelay(100/portTICK_PERIOD_MS);
         }
+
     }
 
     // Tarea para procesar las teclas recibidas desde la cola
